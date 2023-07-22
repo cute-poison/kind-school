@@ -18,6 +18,10 @@ img{
     object-fit: cover;
 }
 
+.hero-sec{
+    overflow: hidden;
+}
+
 :root{
 --bs-blue: #0d6efd;
 --bs-indigo: #6610f2;
@@ -62,9 +66,11 @@ img{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #000000a0;
+    background-blend-mode: darken;
 }
 .nav--container{
-    height: 5rem;
+    height: 4rem;
     padding: 2rem;
     display: flex;
     justify-content: space-between;
@@ -74,6 +80,9 @@ img{
     color: var(--bs-secondary);
     align-items: center;
     font-size: larger;
+    position: fixed;
+    width: 100%;
+    z-index: 11;
 }
 
 .nav-link{
@@ -91,7 +100,11 @@ img{
     text-align: center;
 }
 .registration:hover{
-    scale: 1.1;
+   -webkit-transform: scale(1.1);
+   -moz-transform: scale(1.1);
+   -ms-transform: scale(1.1);
+   -o-transform: scale(1.1);
+   transform: scale(1.1);
     transition: all 100ms ease;
 }
 
@@ -106,7 +119,7 @@ nav a{
 }
 
 .nav-link a:hover{
-    color: var(--bs-teal);
+    color: var(--bs-black);
     /* text-shadow: 25%; */
     font-size: 20px;
     transition: all 100ms ease;
@@ -122,11 +135,12 @@ nav a{
     display: none;
     position: absolute;
     right:0rem;
-    top: 65px;
+    top: 55px;
     height: 0;
     width: 250px;
     overflow: hidden;
     z-index: 1;
+    position: fixed;
 }
 
 .dropdown_menu.open{
@@ -142,7 +156,6 @@ nav a{
     padding: 0.7rem;
 }
 
-
 .dropdown_menu a:hover{
     color: var(--bs-black);
     text-shadow: 25%;
@@ -152,7 +165,11 @@ nav a{
 .dropdown_menu li:hover{
     background-color:var(--bs-teal);
     transition: all 100ms ease;
-    scale: 0.9;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 
@@ -180,6 +197,9 @@ nav a{
 
 .hero-text h5{
     margin-bottom: 0%;
+}
+.hero-text h1{
+    margin-bottom: 2.5rem;
 }
 
 .link{
@@ -223,6 +243,9 @@ footer{
     padding: 3rem;
     background-color: var(--bs-cyan);
 }
+footer p a{
+    color: var(--bs-gray-100);
+}
 
 .socials{
     gap: 1rem;
@@ -241,6 +264,7 @@ footer{
 }
 
 .split{
+    -webkit-height: fit-content;
     height: fit-content;
     background-color: #0093E9;
     background-image: linear-gradient(246deg, #0093E9 0%, #80D0C7 100%);
@@ -253,6 +277,11 @@ footer{
     display: flex;
     justify-content: space-between;
     gap: 10px;
+}
+
+
+.hero-text span{
+    text-decoration: line-through;
 }
 
 /* =====================RESPONSIVE============================= */
@@ -279,29 +308,36 @@ footer{
         padding-right: 3rem;
     }
 
+    .hero-sec{
+        padding-top: 2rem;
+    }
+
     .hero-img img{
-        width: 400px;
+        width: 300px;
         height:500px;
     }
 
     .offset{
-        transform: translateY(-10%);
+        transform: translateY(-13%);
         gap: 10px;
     }
 
     .split{
-        height: 50px;
+        height:40px;
     }
+
     .split h2{
        font-size: 20px;
-       padding: none;
+       padding-top: none !important;
+       transform: translateY(-30px);
 
     }
 }
 
-@media (max-width:425px){
+@media (max-width:426px){
     .dropdown_menu{
         left: 0rem;
+        top: 40px;
         width: unset;
     }
 
@@ -309,9 +345,23 @@ footer{
         display: none;
     }
 
+    .hero-sec .hero-text{
+        padding-left: 0rem;
+    }
+
+    .hero-sec{
+        padding-top: 10px;
+    }
+
+
     .hero-container h1{
         font-size: larger;
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
+    }
+
+    .main_hero{
+        background-color: #000000a0;
+        background-blend-mode: darken;
     }
 
     .hero-container p{
@@ -322,22 +372,30 @@ footer{
         padding: 10px;
     }
 
-    .hero-img img{
-        width: 290px;
-        height:400px;
+    .hero-img{
+        display: none;
     }
 
     .hero-text{
-        padding-top: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
     }
     .hero-text h5{
         font-size: small;
     }
     .hero-text h1{
-        font-size: x-larger;
+        /* padding: 2rem; */
+        padding-top: 3rem;
+        font-size: x-large;
+        text-align: start;
     }
 
     .link{
         font-size: 10px;
+    }
+
+    .main_sec h1{
+        font-size: x-large;
+        text-align: center;
     }
 }
