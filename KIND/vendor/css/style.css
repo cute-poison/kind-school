@@ -82,6 +82,7 @@ img{
     font-size: larger;
     position: fixed;
     width: 100%;
+    top: 0;
     z-index: 11;
 }
 
@@ -282,6 +283,7 @@ footer p a{
 
 .hero-text span{
     text-decoration: line-through;
+
 }
 
 /* =====================RESPONSIVE============================= */
@@ -296,6 +298,7 @@ footer p a{
 
     .dropdown_menu{
         display: block;
+        z-index: 112;
     }
 
     .nav--container i{
@@ -399,3 +402,47 @@ footer p a{
         text-align: center;
     }
 }
+
+
+/* ====================About us==================================== */
+
+footer .container .Copyright {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.vertical-line {
+    border-left: 1px solid #000;
+    height: 100%;
+}
+
+.history {
+    /* background-image: url(/asset/img/pngegg\ \(4\).png); */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.history img {
+    height: 50%;
+    width: 50%;
+}
+
+.sticky {
+    position: sticky;
+    top: 10%;
+    height: 6dvh;
+}
+
+
+
+@media (max-width:769px){
+    .sticky{
+        top: 11%;
+    }
+
+    .last-foot{
+        padding: 1rem;
+    }
+}    
