@@ -89,8 +89,11 @@ img{
 .nav-link{
     display: flex;
     padding: 0 30px;
-    gap: 75px;
+    gap: 40px;
     color: var(--bs-light);
+}
+.nav-link a{
+    font-size: 1rem;
 }
 
 .registration{
@@ -122,7 +125,7 @@ nav a{
 .nav-link a:hover{
     color: var(--bs-black);
     /* text-shadow: 25%; */
-    font-size: 20px;
+    font-size: 17px;
     transition: all 100ms ease;
 }
 
@@ -241,7 +244,7 @@ nav a{
 }
 
 footer{
-    padding: 3rem;
+    padding: 1rem;
     background-color: var(--bs-cyan);
 }
 footer p a{
@@ -406,7 +409,7 @@ footer p a{
 
 /* ====================About us==================================== */
 
-footer .container .Copyright {
+footer .container-fluid .Copyright {
     display: flex;
     justify-content: space-between;
 }
@@ -446,3 +449,53 @@ footer .container .Copyright {
         padding: 1rem;
     }
 }    
+
+/* =================FAQs======================= */
+
+.fixed{
+    /* position: fixed; */
+    /* top: 5rem; */
+    height: 65vh;
+    padding-top: 5rem;
+    
+}
+
+.fixed h6 a{
+    color: var(--bs-black);
+}
+
+.answer{
+    height: fit-content;
+}
+
+.accordion{
+    display: none;
+}
+
+.accordion.active{
+    display: block;
+}
+
+.Q2{
+    display: none;
+}
+
+@media screen and (max-width:500px){
+    .Q2{
+        display: block;
+    }
+    .Q1{
+        display:none;
+    }
+}
+
+/* ==============contact=============== */
+@media screen and (max-width:769px){
+    .contact-img{
+        display: none;
+    }
+
+    footer{
+        font-size: 13px;
+    }
+}
